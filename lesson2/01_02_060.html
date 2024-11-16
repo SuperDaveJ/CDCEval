@@ -1,0 +1,552 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/cdc_hp_content.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Introduction to Policy Evaluation</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../styles/cdc_hp.css" />
+<script type="text/javascript" src="../scripts/jquery-1.7.1.min.js"></script>
+<script type="text/JavaScript" src="../scripts/APIWrapper.js"></script>
+<script type="text/JavaScript" src="../scripts/SCOFunctions.js"></script>
+<script type="text/javascript" src="../scripts/cdc_hp_scorm.js"></script>
+<script type="text/javascript" src="../scripts/cdc_hp_content.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../styles/jplayer_cdc_hp.css" />
+<script type="text/javascript" src="../scripts/jquery.jplayer.min.js"></script>
+
+<style type="text/css">
+img { border: none; }
+a { cursor: pointer; }
+
+.slides {
+	position: absolute; 
+	left: 0px; 
+	top:0px; 
+	height: 0px; 
+	width: 800px;
+	overflow:hidden;
+	display:block;
+}
+
+.slideImg {
+	position: absolute;
+	left: 0px;
+	top: -6px;
+	width: 321px;
+	height: 321px;
+	margin: 0px 0px 0px 38px;
+}
+.slideTxt {
+	position: absolute;
+	left: 400px;
+	top: 0px;
+	width: 355px;
+	height: 263px;
+	margin: 10px 22px;
+	color:#000;
+}
+.slideTxt p, .slideTxt ul, .slideTxt ol {
+	color: #fff;
+}
+p.slideTitle {
+	font-weight: bold;
+}
+#sImg_1 { visibility: visible; }
+
+</style>
+
+<script type="text/javascript">
+
+    hasAudio = true;
+	var forcedProgression = false;	//disable slides navigation button when audio is playing
+	var hasPlayButton = true;		//click Play to start
+	
+    var nextURL = "01_02_070.html";
+    var backURL = "01_02_050.html";
+	
+	var nSlides = 18;
+	var iSlide = 0;
+	
+	function startSlides() {
+		$("#slidesHolder").prepend($("#tempHolder").html()).css("display", "block");
+		$("#leftHalf").css("display", "block");
+		$("#rightHalf").css("display", "block");
+		$("#start").css("display", "none");
+		updateSlide(2);
+	}
+	
+	function updateSlide( direction ) {
+		if (direction == 1) {
+			//move back
+			iSlide -= 1;
+		}
+		if (direction == 2) {
+			//move next
+			iSlide += 1;
+			if (iSlide == nSlides) { showNext(); }
+		}
+		
+		if ( hasAudio && forcedProgression ) {
+			$("#leftArrow").css("display", "none");
+			$("#rightArrow").css("display", "none");
+		} else {
+			if (iSlide <= 1) {
+				$("#leftArrow").css("display", "none");
+			} else if (iSlide == nSlides) {
+				$("#rightArrow").css("display", "none");
+			} else {
+				$("#leftArrow").css("display", "block");
+				$("#rightArrow").css("display", "block");
+			}
+		}
+		
+		for (var i=1; i<=nSlides; ++i) {
+			$("#slide"+i).css({"height": "0px"});
+		}
+		$("#slide"+iSlide).css({"height": "283px"});
+		if (hasAudio) { playSlideAudio(iSlide-1); }
+	}
+	
+  	var arrAudios = ['01_02_060a1', '01_02_060a2', '01_02_060a3', '01_02_060b1', '01_02_060b2', '01_02_060b3', '01_02_060c1', '01_02_060c2', '01_02_060c3', '01_02_060d1', '01_02_060d2', '01_02_060d3', '01_02_060e1', '01_02_060e2', '01_02_060e3', '01_02_060f1', '01_02_060f2', '01_02_060f3'];
+
+  function playSlideAudio(iAudio) {
+	  if (iSlide <= arrAudios.length) {
+		  var thisAudio = '../audios/' + arrAudios[iAudio];
+  
+		  $("#jquery_jplayer").jPlayer("setMedia", {
+			  mp3: thisAudio + ".mp3",
+			  oga: thisAudio + ".ogg"
+		  }).jPlayer("play");
+	  }
+  }
+
+  function enableSlideButtons() {
+	if ( forcedProgression ) {
+	  if ( iSlide > 1) {
+			$("#leftArrow").css("display", "block");
+	  }
+	  if ( iSlide < 9 ) {
+			$("#rightArrow").css("display", "block");
+	  }
+	} else {
+		//do nothing
+	}
+  }
+
+  $(document).ready( function() {
+	  if ( !hasAudio ) {
+		  $("#jp_container").css("display", "none");
+		  $("#cc").css("display", "none");
+	  }
+	  if ( !hasPlayButton ) {
+	  	startSlides();
+	  }
+  });
+</script>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="contentHolder" class="content">
+
+<div id="heading">
+<!-- InstanceBeginEditable name="Heading" -->
+<h1 class="lesNumber">Lesson 2</h1>
+<h2 class="lesTitle">Advancing Public Health Through Policy Evaluation</h2>
+
+<div id="jquery_jplayer" class="jp-jplayer"></div>
+
+<div id="jp_container" class="jp-audio">
+    <div class="jp-gui jp-interface">
+        <ul class="jp-controls">
+            <li><a href="javascript:;" class="jp-play" title="play">play</a></li>
+            <li><a href="javascript:;" class="jp-pause" title="pause">pause</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- InstanceEndEditable -->
+</div><!-- End of heading -->
+
+<!-- InstanceBeginEditable name="PageNumber" -->
+<div id="pgNum">Page 6 of 8</div>
+<!-- InstanceEndEditable -->
+
+<div id="content">
+  <!-- InstanceBeginEditable name="text_left" -->
+<h3 class="pgTitle">Opportunities for and Value of Policy Evaluation  Throughout the Policy Process</h3>
+
+<p style="font-style:italic; font-weight:bold;"><strong><em>Case Study: Smoke-Free Ordinance</em></strong></p>
+
+<p></p>
+<div id="start" style="position:relative; width:100%; text-align:center;">
+  <a href="javascript:startSlides();"><img src="assets/slide_show_cover.png" width="377" height="236"  alt=""/></a>
+</div> 
+
+<!-- Slides Frame graphics -->
+<div id="leftHalf" style="background: url(../sysimages/frame_bgnd.jp); position: absolute; left: 20px; top: 67px; height: 283px; width: 400px; display:none;">
+</div>
+
+<div id="rightHalf" style="background: url(../sysimages/slide-blue-background.png); position: absolute; left: 420px; top: 67px; height: 283px; width: 400px; display:none;">
+</div>
+
+<div id="slidesHolder" style="background: url(../sysimages/slideshow_frame.pn); position: absolute; left: 20px; top: 67px; height: 283px; width: 800px; display:none;">
+
+<div id="leftArrow" style="position:absolute; left:0px; top:130px; width:22px; height:36px; z-index:11; display:none;"><a href="javascript:updateSlide(1);" title="next slide"><img src="../sysimages/left_arrow.png" width="22" height="36"  alt="left arrow"/></a></div>
+
+<div id="rightArrow" style="position:absolute; right:0px; top:130px; width:22px; height:36px;"><a href="javascript:updateSlide(2);" title="previous slide" style="cursor:pointer;"><img src="../sysimages/right_arrow.png" width="22" height="36"  alt="right arrow"/></a></div>
+<!-- End of Slides Frame graphics -->
+
+</div><!-- End of slidesHolder -->
+
+<div id="tempHolder">
+<div id="slide1" class="slides">
+
+<div id="sImg_1" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" />
+  <div style="position: absolute; left: 147px; top: -1px; width: 10px; height: 10px;"><img src="../lesson1/assets/01_01_060b.png" width="140" height="134"  alt=""/></div>
+</div>
+
+<div id="sTxt_1" class="slideTxt">
+<p class="slideTitle">Community Policy Process Activities</p>
+<p>Assess where and when community members are exposed to secondhand smoke, particularly those at greatest risk for poor health outcomes (e.g., children with asthma, older adults).</p> <p>Develop a statement of the problem.</p>
+
+<div style="position: absolute; bottom: 0; left: 45%;">Slide 1</div>
+
+</div>
+
+</div><!-- End of slide1 -->
+
+<div id="slide2" class="slides">
+
+<div id="sImg_2" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" />
+  <div style="position: absolute; left: 147px; top: -1px; width: 10px; height: 10px;"><img src="../lesson1/assets/01_01_060b.png" width="140" height="134"  alt=""/></div>
+</div>
+
+<div id="sTxt_2" class="slideTxt">
+<p class="slideTitle">Opportunities for Policy Evaluation</p>
+<ul>
+	<li>Evaluate the problem statement according to the evidence base.</li>
+	<li>Evaluate whether the problem can be addressed through policy.</li>
+	<li>Assess stakeholder engagement in problem identification.</li>
+</ul>
+
+<div style="position: absolute; bottom: 0; left: 45%;">Slide 2</div>
+
+</div>
+
+</div><!-- End of slide2 -->
+
+<div id="slide3" class="slides">
+
+<div id="sImg_3" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" />
+  <div style="position: absolute; left: 147px; top: -1px; width: 10px; height: 10px;"><img src="../lesson1/assets/01_01_060b.png" width="140" height="134"  alt=""/></div>
+</div>
+
+<div id="sTxt_3" class="slideTxt">
+<p class="slideTitle">Value of Policy Evaluation</p>
+<p>Can lead to a more effective problem statement to guide policy analysis and development.</p>
+</div>
+
+<div style="position: absolute; bottom: 0; left: 45%;">Slide 3</div>
+
+</div><!-- End of slide3 -->
+
+<div id="slide4" class="slides">
+<div id="sImg_4" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" />
+  <div style="position: absolute; left: 183px; top: 103px; width: 10px; height: 10px;"><img src="../lesson1/assets/01_01_060c.png" width="107" height="161"  alt=""/></div>
+</div>
+
+<div id="sTxt_4" class="slideTxt">
+<p class="slideTitle">Community Policy Process Activities</p>
+<ul>
+<li>Convene stakeholders.</li>
+<li>Identify, assess, and compare potential policy options for reducing exposure to secondhand smoke.</li>
+</ul>
+</div>
+
+<div style="position: absolute; bottom: 0; left: 45%;">Slide 4</div>
+
+</div><!-- End of slide4 -->
+
+<div id="slide5" class="slides">
+<div id="sImg_5" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" />
+  <div style="position: absolute; left: 183px; top: 103px; width: 10px; height: 10px;"><img src="../lesson1/assets/01_01_060c.png" width="107" height="161"  alt=""/></div>
+</div>
+
+<div id="sTxt_5" class="slideTxt">
+<p class="slideTitle">Opportunities for Policy Evaluation</p>
+<ul>
+	<li>Assess stakeholder engagement.</li>
+	<li>Determine whether the data review is sufficient to inform policy development.</li>
+	<li>Identify criteria that will be used to assess the policy options and the process used to compare policies.</li>
+</ul>
+</div>
+
+<div style="position: absolute; bottom: 0; left: 45%;">Slide 5</div>
+
+</div><!-- End of slide5 -->
+
+<div id="slide6" class="slides">
+<div id="sImg_6" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" />
+<div style="position: absolute; left: 183px; top: 103px; width: 10px; height: 10px;"><img src="../lesson1/assets/01_01_060c.png"  alt="" width="107" height="161" /></div>
+</div>
+
+<div id="sTxt_6" class="slideTxt">
+<p class="slideTitle">Value of Policy Evaluation</p>
+<ul>
+	<li>Can lead to more effective stakeholder engagement.</li>
+	<li>Can help in identifying the policy or set of policies likely to have a positive impact on the problem.</li>
+	<li>Can help identify additional data that can inform policy development.</li>
+</ul>
+
+<div style="position: absolute; bottom: 0; left: 45%;">Slide 6</div>
+
+</div>
+
+</div><!-- End of slide6 -->
+
+<div id="slide7" class="slides">
+<div id="sImg_7" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" />
+<div style="position: absolute; left: 68px; top: 201px;"><img src="../lesson1/assets/01_01_060d.png"  alt="" width="164" height="89"/></div>
+</div>
+
+<div id="sTxt_7" class="slideTxt">
+<p class="slideTitle">Community Policy Process Activities</p>
+
+<ul>
+  <li>Prioritize getting an ordinance to prohibit smoking in recreation areas.</li>
+  <li>Develop draft language for the ordinance.</li>
+</ul>
+</div>
+
+<div style="position: absolute; bottom: 0; left: 45%;">Slide 7</div>
+
+</div><!-- End of slide7 -->
+
+<div id="slide8" class="slides">
+<div id="sImg_8" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" />
+<div style="position: absolute; left: 68px; top: 201px;"><img src="../lesson1/assets/01_01_060d.png"  alt="" width="164" height="89"/></div>
+</div>
+
+<div id="sTxt_8" class="slideTxt">
+<p class="slideTitle">Opportunities for Policy Evaluation</p>
+
+<ul>
+  <li>Evaluate the viability of this prioritization based on evidence.</li>
+  <li>Assess stakeholder engagement and to what extent stakeholder concerns were “translated” into draft language of the ordinance.</li>
+  <li>Assess the drafted ordinance. Is it based on evidence? Is the language strong enough to enforce? Is it consistent with model policy guidance?</li>
+</ul>
+</div>
+
+<div style="position: absolute; bottom: 0; left: 45%;">Slide 8</div>
+
+</div><!-- End of slide8 -->
+
+<div id="slide9" class="slides">
+<div id="sImg_9" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" />
+<div style="position: absolute; left: 68px; top: 201px;"><img src="../lesson1/assets/01_01_060d.png"  alt="" width="164" height="89"/></div>
+</div>
+
+<div id="sTxt_9" class="slideTxt">
+<p class="slideTitle">Value of Policy Evaluation</p>
+<ul>
+  <li>Can lead to more effective prioritization if needed.</li>
+  <li>Can inform the development of draft language that meets stakeholders’ identified needs and is based on evidence and model policy guidance.</li>
+</ul>
+</div>
+
+<div style="position: absolute; bottom: 0; left: 45%;">Slide 9</div>
+
+</div><!-- End of slide9 -->
+
+<div id="slide10" class="slides">
+<div id="sImg_10" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" /><div style="position: absolute; left: 3px; top: 105px;"><img src="../lesson1/assets/01_01_060e.png"  alt="" width="108" height="163"/></div>
+</div>
+
+<div id="sTxt_10" class="slideTxt">
+<p class="slideTitle">Community Policy Process Activities</p>
+
+<ul>
+  <li>Engage additional partners.</li>
+  <li>Identify a local champion.</li>
+  <li>Monitor the process by which the policy was enacted (or not enacted).</li>
+  <li>Raise public awareness.</li>
+</ul>
+</div>
+
+<div style="position: absolute; bottom: 0; left: 45%;">Slide 10</div>
+
+</div><!-- End of slide10 -->
+
+<div id="slide11" class="slides">
+<div id="sImg_11" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" /><div style="position: absolute; left: 3px; top: 105px;"><img src="../lesson1/assets/01_01_060e.png"  alt="" width="108" height="163"/></div>
+</div>
+
+<div id="sTxt_11" class="slideTxt">
+<p class="slideTitle">Opportunities for Policy Evaluation</p>
+
+<ul>
+  <li>Assess stakeholder engagement.</li>
+  <li>Assess public awareness of the problem and the proposed solution.</li>
+  <li>Identify the barriers or facilitators to enactment of the policy.</li>
+  <li>Assess any differences between the policy language and requirements as drafted and policy language and requirements as enacted.</li>
+</ul>
+</div>
+
+<div style="position: absolute; bottom: 0; left: 45%;">Slide 11</div>
+
+</div><!-- End of slide11 -->
+
+<div id="slide12" class="slides">
+<div id="sImg_12" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" /><div style="position: absolute; left: 3px; top: 105px;"><img src="../lesson1/assets/01_01_060e.png"  alt="" width="108" height="163"/></div>
+</div>
+
+<div id="sTxt_12" class="slideTxt">
+<p class="slideTitle">Value of Policy Evaluation</p>
+<ul>
+	<li>Can complement outcome evaluation to inform the evidence base.</li>
+	<li>Can lead to improved implementation and enforcement.</li>
+    <li>Can inform development of a modified ordinance.</li>
+    <li>Can help in identifying unintended outcomes.</li>
+</ul>
+</div>
+
+<div style="position: absolute; bottom: 0; left: 45%;">Slide 12</div>
+
+</div><!-- End of slide12 -->
+
+<div id="slide13" class="slides">
+<div id="sImg_13" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" /><div style="position: absolute; left: 9px; top: 5px;"><img src="../lesson1/assets/01_01_060f.png"  alt="" width="145" height="130"/></div>
+</div>
+
+<div id="sTxt_13" class="slideTxt">
+<p class="slideTitle">Community Policy Process Activities</p>
+<ul>
+	<li>Engage stakeholders.</li>
+	<li>Identify or collect baseline data.</li>
+    <li>Create an implementation and monitoring plan.</li>
+    <li>Implement the policy (e.g., no smoking signs, policy and procedure guidance).</li>
+    <li>Work with police and local leaders to enforce the ordinance. </li>
+    <li>Identify and collect data during the policy implementation process.</li>
+    <li>Report evaluation findings.</li>
+    <li>Continue raising awareness.</li>
+</ul>
+</div>
+</div><!-- End of slide13 -->
+
+<div id="slide14" class="slides">
+<div id="sImg_14" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" /><div style="position: absolute; left: 9px; top: 5px;"><img src="../lesson1/assets/01_01_060f.png"  alt="" width="145" height="130"/></div>
+</div>
+
+<div id="sTxt_14" class="slideTxt">
+<p class="slideTitle">Opportunities for Policy Evaluation</p>
+<p>Evaluate enforcement, implementation, and outputs. </p>
+</div>
+</div><!-- End of slide14 -->
+
+<div id="slide15" class="slides">
+<div id="sImg_15" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" /><div style="position: absolute; left: 9px; top: 5px;"><img src="../lesson1/assets/01_01_060f.png"  alt="" width="145" height="130"/></div></div>
+
+<div id="sTxt_15" class="slideTxt">
+<p class="slideTitle">Value of Policy Evaluation</p>
+
+<ul>
+  <li>Can complement outcome evaluation to inform the evidence base.</li>
+  <li>Can lead to improved implementation and enforcement.</li>
+  <li>Can inform development of a modified ordinance.</li>
+  <li>Can help in identifying unintended outcomes.</li>
+</ul>
+</div>
+</div><!-- End of slide15 -->
+
+<div id="slide16" class="slides">
+<div id="sImg_16" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" /><div style="position: absolute; left: 91px; top: 94px;"><img src="../lesson1/assets/01_01_060g_2.png"  alt="" width="118" height="106"/></div><div style="position: absolute; left: 108px; top: 180px;"><img src="../lesson1/assets/01_01_060h_2.png"  alt="" width="87" height="43"/></div></div>
+
+<div id="sTxt_16" class="slideTxt">
+<p class="slideTitle">Community Policy Process Activities</p>
+
+<ul>
+  <li>Engage stakeholders.</li>
+  <li>Identify or collect baseline data.</li>
+  <li>Identify or collect interim data and/or follow-up data</li>
+  <li>Report evaluation findings.</li>
+  <li>Continue raising awareness.</li>
+</ul>
+</div>
+</div><!-- End of slide16 -->
+
+<div id="slide17" class="slides">
+<div id="sImg_17" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" /><div style="position: absolute; left: 91px; top: 94px;"><img src="../lesson1/assets/01_01_060g_2.png"  alt="" width="118" height="106"/></div><div style="position: absolute; left: 108px; top: 180px;"><img src="../lesson1/assets/01_01_060h_2.png"  alt="" width="87" height="43"/></div></div>
+
+<div id="sTxt_17" class="slideTxt">
+<p class="slideTitle">Opportunities for Policy Evaluation</p>
+
+<ul>
+  <li>Evaluate short-term,  intermediate, and long-term health outcomes</li>
+  <li>Evaluate costs and benefits</li>
+  <li>Evaluate cost-effectiveness</li>
+</ul>
+</div>
+</div><!-- End of slide17 -->
+
+<div id="slide18" class="slides">
+<div id="sImg_18" class="slideImg"><img src="../lesson1/assets/01_01_060a_2.png" width="296" height="296" /><div style="position: absolute; left: 91px; top: 94px;"><img src="../lesson1/assets/01_01_060g_2.png"  alt="" width="118" height="106"/></div><div style="position: absolute; left: 108px; top: 180px;"><img src="../lesson1/assets/01_01_060h_2.png"  alt="" width="87" height="43"/></div></div>
+
+<div id="sTxt_18" class="slideTxt">
+<p class="slideTitle">Value of Policy Evaluation</p>
+
+<ul>
+  <li>Can build the evidence base.</li>
+  <li>Can identify the policy’s impacts on public health.</li>
+  <li>Can provide return-on-investment data.</li>
+  <li>Can identify unintended outcomes.</li>
+</ul>
+</div>
+</div><!-- End of slide18 -->
+
+</div> <!-- End of tempHolder -->
+
+<!--
+<p style="position: absolute; left: 479px; top: 351px; width: 331px;"><a href='javascript:show508version("SlidesWithAudio_508.html");'>Select this link for a text alternative to the slideshow.</a></p>
+-->
+
+<div id="cc" style="position: absolute; left: 768px; top: 4px; width: 71px; height: 16px;"><a href="javascript:show_cc();showNext();" title="closed caption">Transcript</a></div>
+
+<!-- InstanceEndEditable -->
+</div><!-- End of content -->
+
+<!-- InstanceBeginEditable name="prompt" -->
+<div id="prompt2">Select the graphic to begin the slideshow. Then  use the arrows to navigate within it. When finished, select NEXT.</div>
+<!-- InstanceEndEditable -->
+
+<div id="navBar">
+  	<a href="#" id="next" name="next" title="Next"><span>Next</span></a>
+  	<a href="#" id="back" name="back" title="Back"><span>Back</span></a>
+  	<a href="#" id="refresh" name="refresh" title="Refresh"><span>Refresh</span></a>
+    <a href="#" id="help" name="help" title="Help"><span>Help</span></a>
+    <a href="#" id="resources" name="resources" title="Resources"><span>Resources</span></a>
+    <a href="#" id="glossary" name="glossary" title="Glossary"><span>Glossary</span></a>
+    <a href="#" id="menu" name="menu" title="Menu"><span>Menu</span></a>
+</div><!-- End of navBar -->
+
+<a href="#" name="exit" title="Exit" id="exit"><span>Exit</span></a>
+
+<!-- Comment Tool -->
+<div id="comment_link">
+    <div id="add_comment">
+    <a href="javascript:addComment()">Add Comment</a></div>
+    
+    <div id="view_comment">
+    <a href="javascript:viewComment()">View Comments</a></div>
+</div>
+<!-- End of Comment Tool -->
+
+</div><!-- End of contentHolder -->
+
+<!-- InstanceBeginEditable name="BottomCodeArea" -->
+
+<!-- InstanceEndEditable -->
+
+</body>
+<!-- InstanceEnd --></html>

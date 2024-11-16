@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/popupPage.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Popup Information</title>
+<style type="text/css">
+#fdbk {
+	position: relative;
+	top: 25px;
+	width:100%;
+}
+#fdbkImg {
+	position:absolute;
+	left:0;
+	top:0;
+	width: 275px;
+	height: 245px;
+}
+#fdbkTxt {
+	position: absolute;
+	left: 300px;
+	top: 0;
+	width: 505px;
+	height: 340px;
+}
+</style>
+
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../styles/cdc_hp_popup.css" />
+<!-- InstanceBeginEditable name="head" -->
+
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="popWrapper">
+  <div id="popContent">
+<!-- InstanceBeginEditable name="MainContent" -->
+<h1 class="popTitle">Feedback</h1>
+
+<div id="fdbk">
+
+<div id="fdbkImg"></div>
+<div id="fdbkTxt"></div>
+
+</div>
+
+<script type="text/javascript" src="../scripts/queryFunctions.js"></script>
+<script type="text/javascript">
+
+function showFinalFdbk() {
+	document.getElementById('fdbkImg').innerHTML = "<img src='" + arrPopup[3][0] + "' alt='" + arrPopup[3][1] + "' />";
+	document.getElementById('fdbkTxt').innerHTML = arrPopup[3][2];
+	document.getElementById('parent.giveAdvice').style.visibility = 'hidden';
+}
+
+var btnHTML = "<p style='text-align:center'><a href='javascript:showFinalFdbk()' title='Second Chance'><img src='../sysimages/secondchance_0.png' onmouseover='this.src=\"../sysimages/secondchance_2.png\"' onmouseout='this.src=\"../sysimages/secondchance_0.png\"' alt='Second Chance' /></a></p>";
+
+var iTerm = parseInt(getQueryValue('popterm'));
+
+var arrPopup = [];
+var nTerm = 4;
+for (var i=0; i<nTerm; i++) {
+	arrPopup[i] = new Array(3);
+}
+
+arrPopup[0][2] = "<p>You have not made any selections. Please try again.</p>";
+
+arrPopup[1][0] = "assets/01_04_030c.png";
+arrPopup[1][1] = "Selectable photo of a young woman (Whitney), who looks confused.";
+arrPopup[1][2] = "<p>Whitney is relieved to hear you say she doesn’t have to deal with the policy process, so she ignores her supervisor’s requests for policy evaluation information. Now she says her supervisor is looking for you, and he doesn’t look happy. Maybe that wasn’t the best advice.</p> <p>Select the SECOND CHANCE button to see a better ending for this scenario.</p>" + btnHTML;
+
+arrPopup[2][0] = "assets/01_04_030b.png";
+arrPopup[2][1] = "Photo of a young woman (Whitney), who looks happy or thoughtful.";
+arrPopup[2][2] = "<p>Whitney is able to apply your advice by engaging some partners in the evaluation process, and together they hone the objectives and goals of their evaluation, engage other relevant stakeholders, describe the policy effort, and uncover some interesting data.</p> <p>Close this window and select the NEXT arrow to continue.</p>";
+
+arrPopup[3][0] = "assets/01_04_030b.png";
+arrPopup[3][1] = "Photo of a young woman (Whitney), who looks angry or frustrated.";
+arrPopup[3][2] = "<p>Whitney tries again, and this time she engages some partners in the evaluation process. Together they hone the objectives and goals of their evaluation, engage other relevant stakeholders, describe the policy effort, and uncover some interesting data.</p> <p>Close this window and select the NEXT arrow to continue.</p>";
+
+if (iTerm == 1) {
+	document.getElementById('fdbk').innerHTML = arrPopup[iTerm-1][2];
+} else {
+	document.getElementById('fdbkImg').innerHTML = "<img src='" + arrPopup[iTerm-1][0] + "' alt='" + arrPopup[iTerm-1][1] + "' />";
+	document.getElementById('fdbkTxt').innerHTML = arrPopup[iTerm-1][2];
+}
+
+</script>
+<!-- InstanceEndEditable -->
+  </div> <!-- End of popContent -->
+  
+  <div id="close">
+	<a href="javascript:parent.Shadowbox.close()">
+	<img src="../shadowbox/close_0.png" onmouseover="this.src='../shadowbox/close_2.png'" onmouseout="this.src='../shadowbox/close_0.png'" width="68" height="16" border="0" alt="close" />
+    </a>
+  </div>
+</div><!-- End of popWrapper -->
+</body>
+<!-- InstanceEnd --></html>

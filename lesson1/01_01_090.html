@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/cdc_hp_content.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Introduction to Policy Evaluation</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../styles/cdc_hp.css" />
+<script type="text/javascript" src="../scripts/jquery-1.7.1.min.js"></script>
+<script type="text/JavaScript" src="../scripts/APIWrapper.js"></script>
+<script type="text/JavaScript" src="../scripts/SCOFunctions.js"></script>
+<script type="text/javascript" src="../scripts/cdc_hp_scorm.js"></script>
+<script type="text/javascript" src="../scripts/cdc_hp_content.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../shadowbox/shadowbox.css" />
+<script type="text/javascript" src="../shadowbox/shadowbox.js"></script>
+
+<style type="text/css">
+.slides {
+	position: absolute; 
+	left: 0px; 
+	top:0px; 
+	height: 0px; 
+	width: 0px;
+	margin:10px; 
+	overflow:hidden;
+}
+</style>
+
+<script type="text/javascript">
+    itemsViewed = "0000000";
+	
+	if ( !isPageViewed(getPage()) ) {
+		//enableNext = false;
+	}
+    var nextURL = "01_01_100.html";
+    var backURL = "01_01_080.html";
+	
+	var nSlides = 7;
+	function showText(slideID) {
+		for (var i=1; i<=nSlides; ++i) {
+			$("#slide"+i).css({"height": "0px", "width": "0px", "overflow": "hidden"});
+		}
+		$("#"+slideID).css({width: "496px", "overflow": "auto"}).animate({"height": "205px"}, 1000);
+
+/*		
+		switch(slideID) {
+			case "slide1":
+				$("#"+slideID).css({"overflow": "auto"}).animate({height:"205px", width:"496px"}, 1000);
+				break;
+			case "slide2":
+			case "slide7":
+				$("#"+slideID).css({"top": "205px", "width": "496px", "overflow": "auto"}).animate({top:"0px", height:"205px"}, 1000);
+				break;
+			case "slide3":
+			case "slide6":
+				$("#"+slideID).css({width: "496px", "overflow": "auto"}).animate({"height": "205px"}, 1000);
+				break;
+			case "slide4":
+				$("#"+slideID).css({"left": "496px", "height": "205px"}).animate({left:"0px", width: "496px"}, 1000);
+				break;
+			case "slide5":
+				$("#"+slideID).css({"height": "205px", "overflow": "auto"}).animate({width:"496px"}, 1000);
+				break;
+			default:
+				$("#"+slideID).css({"height": "205px", "width": "496px", "overflow": "auto"});
+		}
+*/		
+	}
+	
+	Shadowbox.init({
+		overlayOpacity: 0.8,
+		modal: true
+	});
+</script>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="contentHolder" class="content">
+
+<div id="heading">
+<!-- InstanceBeginEditable name="Heading" -->
+<h1 class="lesNumber">Lesson 1</h1>
+<h2 class="lesTitle">Overview of Policy Evaluation</h2>
+<!-- InstanceEndEditable -->
+</div><!-- End of heading -->
+
+<!-- InstanceBeginEditable name="PageNumber" -->
+<div id="pgNum">Page 9 of 17</div>
+<!-- InstanceEndEditable -->
+
+<div id="content">
+  <!-- InstanceBeginEditable name="text_left" -->
+<h3 class="pgTitle">What Is Policy Evaluation?</h3>
+
+<p style="font-style:italic; font-weight:bold;">Overview of Evaluation Within and Across the Policy Process</p>
+
+<p>Select each part of the graphic to learn about the purpose of policy evaluation throughout the policy process.</p>
+
+<div style="position: absolute; top: 100px; left: 47px;">
+	<img src="assets/01_01_090a.png" width="242" height="242" />
+</div>
+ 
+<div style="position: absolute; top: 100px; left: 170px;"><a href="javascript:showText('slide1');checkStatus(1);" alt="I. Problem Identification"><img src="assets/01_01_060b_1.png" onclick="this.src='assets/01_01_060b.png'" width="115" height="112" /></a></div>
+
+<div style="position: absolute; top: 181px; left: 198px;"><a href="javascript:showText('slide2');checkStatus(2);" alt="II. Policy Analysis"><img src="assets/01_01_060c_1.png" onclick="this.src='assets/01_01_060c.png'" width="91" height="142" /></a></div>
+
+<div style="position: absolute; top: 265px; left: 100px;"><a href="javascript:showText('slide3');checkStatus(3);" alt="III. Strategy and Policy Development"><img src="assets/01_01_060d_1.png" onclick="this.src='assets/01_01_060d.png'" width="143" height="80" /></a></div>
+
+<div style="position: absolute; top: 187px; left: 44px;"><a href="javascript:showText('slide4');checkStatus(4);" alt="IV. Policy Enactment"><img src="assets/01_01_060e_1.png" onclick="this.src='assets/01_01_060e.png'" width="99" height="138" /></a></div>
+
+<div style="position: absolute; top: 99px; left: 51px;"><a href="javascript:showText('slide5');checkStatus(5);" alt="V. Policy Implementation"><img src="assets/01_01_060f_1.png" onclick="this.src='assets/01_01_060f.png'" width="120" height="111" /></a></div>
+
+<div style="position: absolute; top: 179px; left: 125px;"><a href="javascript:showText('slide6');checkStatus(6);" alt="V. Policy Implementation"><img src="assets/01_01_060g_1.png" onclick="this.src='assets/01_01_060g.png'" width="91" height="83" /></a></div>
+
+<div style="position: absolute; top: 245px; left: 137px;"><a href="javascript:showText('slide7');checkStatus(7);" alt="V. Policy Implementation"><img src="assets/01_01_060h_1.png" onclick="this.src='assets/01_01_060h.png'" width="76" height="41" /></a></div>
+
+<div id="slidesHolder" style="background:#FFC; border:1px solid #CC3; position: absolute; left: 310px; top: 98px; height: 228px; width: 520px;">
+
+<div id="slide1" class="slides">
+<p class="slideTitle">Evaluation Within the Problem Identification Domain</p>
+
+<p>The purpose of evaluation within this domain is to identify the context and cause(s) of the issue and the extent that it lends itself to potential policy solution(s) and prioritized action. This domain asks the question, “What are the risk factors and protective factors that could potentially be targeted by a policy intervention?”</p>
+
+</div><!-- End of slide1 -->
+
+<div id="slide2" class="slides">
+<p class="slideTitle">Evaluation Within the Policy Analysis Domain</p>
+
+<p>The purpose of evaluation within this domain is to understand the process of policy development, including analysis and prioritization of policy options, contextual support/opposition, and potential public health and economic/fiscal impacts.</p>
+
+</div><!-- End of slide2 -->
+
+<div id="slide3" class="slides">
+<p class="slideTitle">Evaluation Within the Strategy and Policy Development Domain</p>
+
+<p>The purpose of evaluation within this domain is to assess the prioritized policy (or set of policies) and the adoption and implementation strategies in the specific settings and jurisdictions.</p>
+
+</div><!-- End of slide3 -->
+
+<div id="slide4" class="slides">
+<p class="slideTitle">Evaluation Within the Policy Enactment Domain</p>
+
+<p>The purpose of evaluation within this domain is to assess the process of policy adoption/enactment (including laws, regulations, procedures, administrative actions, incentives, or voluntary practices).</p>
+
+</div><!-- End of slide4 -->
+
+<div id="slide5" class="slides">
+<p class="slideTitle">Evaluation Within the Policy Implementation Domain</p>
+
+<p>The purposes of evaluation within this domain are to</p>
+
+<ul>
+  <li>Understand how the policy was integrated into relevant settings and systems.</li>
+  <li>Assess compliance with the policy.</li>
+  <li>Identify the occurrence of and variation in intended and unintended outcomes.</li>
+</ul>
+</div><!-- End of slide5 -->
+
+<div id="slide6" class="slides">
+<p class="slideTitle">Evaluation Within the Stakeholder Engagement and Education Overarching Domain</p>
+
+<p>The purpose of evaluation within this domain is to evaluate whether relevant stakeholders were engaged, and how they were engaged, in each of the policy domains.</p>
+
+</div><!-- End of slide6 -->
+
+<div id="slide7" class="slides">
+<p class="slideTitle">The Evaluation Overarching Domain</p>
+
+<p>Evaluation is an overarching domain that occurs within and across all other domains of the policy process.</p>
+
+</div><!-- End of slide7 -->
+
+
+<p style="position: absolute; left: 130px; top: 232px; width: 400px;"><!--<a href='javascript:show508version("Slides_508.html");'>--><a href="01_01_090_pop1.html" rel="shadowbox;width=880;height=500;">Select this link to view a text alternative.</a></p>
+
+</div><!-- End of slidesHolder -->
+
+<!-- InstanceEndEditable -->
+</div><!-- End of content -->
+
+<!-- InstanceBeginEditable name="prompt" -->
+<div id="prompt2">Select each part of the graphic to learn more.  Then select NEXT to continue.</div>
+<!-- InstanceEndEditable -->
+
+<div id="navBar">
+  	<a href="#" id="next" name="next" title="Next"><span>Next</span></a>
+  	<a href="#" id="back" name="back" title="Back"><span>Back</span></a>
+  	<a href="#" id="refresh" name="refresh" title="Refresh"><span>Refresh</span></a>
+    <a href="#" id="help" name="help" title="Help"><span>Help</span></a>
+    <a href="#" id="resources" name="resources" title="Resources"><span>Resources</span></a>
+    <a href="#" id="glossary" name="glossary" title="Glossary"><span>Glossary</span></a>
+    <a href="#" id="menu" name="menu" title="Menu"><span>Menu</span></a>
+</div><!-- End of navBar -->
+
+<a href="#" name="exit" title="Exit" id="exit"><span>Exit</span></a>
+
+<!-- Comment Tool -->
+<div id="comment_link">
+    <div id="add_comment">
+    <a href="javascript:addComment()">Add Comment</a></div>
+    
+    <div id="view_comment">
+    <a href="javascript:viewComment()">View Comments</a></div>
+</div>
+<!-- End of Comment Tool -->
+
+</div><!-- End of contentHolder -->
+
+<!-- InstanceBeginEditable name="BottomCodeArea" -->
+
+<!-- InstanceEndEditable -->
+
+</body>
+<!-- InstanceEnd --></html>

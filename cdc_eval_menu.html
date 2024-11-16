@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+<script type="text/JavaScript" src="scripts/APIWrapper.js"></script>
+<script type="text/JavaScript" src="scripts/SCOFunctions.js"></script>
+<script type="text/javascript" src="scripts/cdc_hp_scorm.js"></script>
+<title>Introduction to Policy Evaluation</title>
+<style type="text/css">
+body {
+	min-width:960px;
+	background-color:#fff;
+	margin:0;
+	padding:0;
+	font-family: sans-serif, Arial, Helvetica;
+	font-size:13px;
+	font-weight:normal;
+	color: #464646;
+}
+/***** Comment Links *****/
+#comment_link {
+	position: absolute;
+	top: 585px;
+	left: 353px;
+	width: 300px;
+	height: 20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	z-index: 10;
+	display: block;
+}
+#comment_link #add_comment {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#comment_link #view_comment {
+	position: absolute;
+	top:0;
+	left: 150px;
+	text-align: right;
+}
+/* End of Comment Links */
+
+#contentHolder {
+	background:#fff url(sysimages/main_menu_bkgnd.jpg) no-repeat top left;
+	position:relative;
+	width: 960px;
+	height: 580px;
+	margin:15px auto;
+}
+
+#itemContainer {
+	position: absolute;
+	left: 69px;
+	top: 133px;
+	width: 495px;
+	height: 340px;
+}
+
+#itemContainer a {
+	/*font-family: Oswald, sans-serif;*/
+	font-family: sans-serif, Arial;
+	font-weight: bold;
+	font-size: 18px;
+	color: #655541;
+	text-transform: uppercase;
+	text-decoration: none;
+	position: absolute;
+	top: 4px;
+	left: 90px;
+	line-height: 16px;
+	width: 335px;
+}
+#itemContainer a.completed {
+	/*font-family: Oswald, sans-serif;*/
+	font-family: sans-serif, Arial;
+	font-weight: bold;
+	font-size: 18px;
+	color: #cecaa9;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+#itemContainer .lesNum {
+	/*font-family: Oswald, sans-serif;*/
+	font-family: sans-serif, Arial;
+	font-weight: bold;
+	font-size: 16px;
+	color: #cecaa9;
+	line-height: 24px;
+}
+#itemContainer lesTitle {
+	/*font-family: Oswald, sans-serif;*/
+	font-family: sans-serif, Arial;
+	font-weight: bold;
+	font-size: 18px;
+	color: #655541;
+}
+
+#exit {
+	position: absolute;
+	left: 855px;
+	top: 14px;
+	width: 52px;
+	height: 16px;
+	background: url("sysimages/exitbtn_0.png");
+}
+#exit:hover { background:url("sysimages/exitbtn_2.png"); }
+#exit span { display: none; }
+
+</style>
+
+<script language="javascript" type="text/javascript">
+/**************** Course Comment Tool ****************/
+var vpPath = "http://prod.c2ti.com/CommentTool/";	//path to Virtual Pilot site
+
+function addComment() {
+	comWin = window.open(vpPath + "addComment.asp?uID=NA&cID=CDC_HPEvaluation&mID=1&lID=0&pID=cdc_eval_menu", "Comments", "width=800,height=600,scrollbars=no");
+}
+
+function viewComment() {
+	viewWin = window.open(vpPath + "reviewComments.asp?uID=NA&cID=CDC_HPEvaluation&mID=1&lID=0&pID=cdc_eval_menu", "Comments", "width=800,height=600,scrollbars=yes");
+}
+/**************** End of Comment Tool ****************/
+
+
+if ( inLMS == true ) {
+	var blnLastPage = false;
+	getSuspendData();
+  	closing = true;
+	window.onunload = callExitCourse;
+}
+
+function exitConfirm(){
+	if (confirm("Do you wish to exit the course?")==true) {
+		exitCourse(true);
+	}
+}
+
+function launchLesson(pgURL) {
+	closing = false;
+	window.location.href = pgURL;
+}
+
+$(document).ready(function() {
+  $("#exit").on("click", exitConfirm);
+  if (inLMS == true) {
+	for (var i=1; i<=nLessons; ++i) {
+		if (getLessonStatus(i) == 2) {
+			eval("document.getElementById('chk" + i + "').style.visibility = 'visible'");
+		} else {
+			eval("document.getElementById('chk" + i + "').style.visibility = 'hidden'");
+		}
+	}
+  }
+});
+</script>
+
+</head>
+
+<body>
+<div id="contentHolder">
+
+<div id="itemContainer">
+	<div id="item1" style="position: absolute; left: 0px; top: 0px; width: 360px;">
+	<span class="lesNum">Lesson 01</span> <a id="les1" href="javascript:launchLesson('lesson1/01_01_010.html');">Overview of Policy Evaluation</a>
+    </div>
+	<div id="chk1" style="position: absolute; left: 450px; top: -5px; width: 24px; height: 25px; visibility: hidden;">
+    <img src="sysimages/checkmark.png" width="24" height="25" alt="lesson 2 completed." /> </div>
+
+	<div id="item2" style="position: absolute; left: 0px; top: 40px; width: 360px; height: 35px;">
+	<span class="lesNum">Lesson 02</span> <a id="les2" style="width: 365px;" href="javascript:launchLesson('lesson2/01_02_010.html');">Advancing Public Health Through Policy Evaluation</a>
+    </div>
+	<div id="chk2" style="position:absolute; left:450px; top:35px; width:24px; height:25px; visibility: hidden;">
+    <img src="sysimages/checkmark.png" width="24" height="25" alt="lesson 3 completed." /> </div>
+
+	<div id="item3" style="position: absolute; left: 0px; top: 90px; width: 360px; height: 20px;">
+	<span class="lesNum">Lesson 03</span> <a id="les3" href="javascript:launchLesson('lesson3/01_03_010.html');">Evaluation Within and Across the Policy Process Domains</a>
+    </div>
+	<div id="chk3" style="position:absolute; left:450px; top:85px; width:24px; height:25px; visibility: hidden;">
+    <img src="sysimages/checkmark.png" width="24" height="25" alt="lesson 4 completed." /> </div>
+
+	<div id="item4" style="position: absolute; left: 0px; top: 140px; width: 360px; height: 20px;">
+	<span class="lesNum">Lesson 04</span> <a id="les4" href="javascript:launchLesson('lesson4/01_04_010.html');">Overcoming Challenges to Policy Evaluation</a>
+    </div>
+	<div id="chk4" style="position:absolute; left:450px; top:135px; width:24px; height:25px; visibility: hidden;">
+    <img src="sysimages/checkmark.png" width="24" height="25" alt="lesson 5 completed." /> </div>
+
+	<div id="item5" style="position: absolute; left: 0px; top: 190px; width: 360px; height: 20px;">
+	<span class="lesNum">Lesson 05</span> <a id="les5" href="javascript:launchLesson('lesson5/01_05_010.html');">Course Summary</a>
+    </div>
+	<div id="chk5" style="position:absolute; left:450px; top:185px; width:24px; height:25px; visibility: hidden;">
+    <img src="sysimages/checkmark.png" width="24" height="25" alt="lesson 6 completed." /> </div>
+	<!--<div id="item6" style="position:absolute; left:0px; top:225px; width:360px;">
+	<span class="lesNum">Lesson X</span> <a href="javascript:launchLesson('samplePages/Introduction.html');" name="les1" id="les6">Sample Pages</a>
+    </div>-->
+	<div id="chk6" style="position: absolute; left: 450px; top: 220px; width: 24px; height: 25px; visibility: hidden;">
+    <img src="sysimages/checkmark.png" width="24" height="25" alt="lesson 1 completed." /> </div>
+    
+</div>
+
+<a id="exit" href="#" title="Exit"><span>Exit</span></a>
+
+
+<!-- Comment Tool -->
+<div id="comment_link">
+    <div id="add_comment">
+    <a href="javascript:addComment()">Add Comment</a></div>
+    
+    <div id="view_comment">
+    <a href="javascript:viewComment()">View Comments</a></div>
+</div>
+<!-- End of Comment Tool -->
+
+</div>
+</body>
+</html>

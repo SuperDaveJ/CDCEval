@@ -1,0 +1,586 @@
+@charset "utf-8";
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	min-width:960px;
+	background-color:#fff;
+	margin:0;
+	padding:0;
+	font-family: sans-serif, Arial, Helvetica;
+	font-size:13px;
+	line-height: 17px;
+	font-weight:normal;
+	color: #464646;
+}
+
+area {
+	cursor: pointer;
+}
+
+#c1s1p2_graphics li {
+	display: inline;
+	list-style: none;
+}
+
+#c1s1p3_graphics li {
+	text-align: center;
+	list-style: none;
+}
+
+#c1s1p4_graphics {
+	float: right;
+	padding: 0 30px;
+	list-style: none;
+}
+
+#c1s2p4_graphics, #c1s2p4_graphics li {
+	margin: 0;
+	padding: 0;
+}
+
+#c1s2p4_graphics li, #c1s2p4_graphics_2 li, #c1s2p4_graphics_3 li, #c1s2p4_graphics_4 li {
+	display: inline;
+	text-align: center;
+	list-style: none;
+}
+
+#c1s5p2 {
+	margin: 5px auto;
+	width: 558px;
+}
+
+#c1s5p2 a img {
+	padding: 5px;
+}
+
+
+#contentHolder.content {
+	background:#fff url(../sysimages/background.jpg) no-repeat top left;
+	position:relative;
+	width: 960px;
+	height: 580px;
+	margin:15px auto;
+}
+
+p {
+	font-family: sans-serif, Arial, Helvetica;
+	font-size:13px;
+	padding: 4px 0;
+	color: #464646;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl {
+	margin-left: 25px;
+	padding: 5px 0;
+}
+li { padding-bottom: 2px; }
+td ol { margin-top: -2px; } /* for questions */
+
+a img {
+	border: none;
+}
+
+a:link {
+	font-family: sans-serif, Arial, Helvetica;
+	font-weight: bold;
+	color: #2b4b76;
+	text-decoration: none;
+}
+a:visited {
+	color: #662d91;
+	text-decoration: none;
+}
+/* shadowbox visited state */
+a.sb_visited {
+	color: #662d91;
+	text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+	color: #688cbb;
+	text-decoration: underline;
+}
+
+#dlink {
+	position:absolute;
+	left:0px;
+	top:370px;
+	width:20px;
+	height:15px;
+}
+
+#text_left {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 400px;
+	height: 335px;
+}
+
+#img_right {
+	position: absolute;
+	left: 415px;
+	top: 0px;
+	width: 360px;
+	height: 335px;
+}
+
+hr {
+	color: #c0c1a2;
+	background-color: #c0c1a2;
+	height: 1px;
+	width: 575px;
+	border: none;
+	margin: 0px 10px 0 20px;
+	text-align:left;
+}
+
+/***************** Exit button *********************/
+#exit {
+	position: absolute;
+	left: 855px;
+	top: 14px;
+	width: 52px;
+	height: 16px;
+	background: url("../sysimages/exitbtn_0.png");
+}
+#exit:hover { background:url("../sysimages/exitbtn_2.png"); }
+#exit span { display: none; }
+
+
+/***************** Heading (titles) ****************/
+#heading1 {
+	position:absolute;
+	left: 60px;
+	top: 46px;
+	width: 870px;
+	height: 30px;
+}
+#audio_icon {
+	position: absolute;
+	left: 770px;
+	top: 16px;
+	width: 71px;
+	height: 16px;
+}
+#audio_icon1 {
+	position: absolute;
+	left: 770px;
+	top: 17px;
+	width: 71px;
+	height: 16px;
+}
+#cc {
+	position: absolute;
+	left: 770px;
+	top: 54px;
+	width: 71px;
+	height: 16px;
+}
+/********** for page 1 ************/
+span.intro {
+	font-family: sans-serif, Arial, Helvetica;
+	font-weight: bold;
+	font-size: 16px;
+	color: #982335;
+}
+
+/********** for all other pages ************/
+#heading {
+	position: absolute;
+	left: 60px;
+	top: 48px;
+	width: 856px;
+	height: 30px;
+}
+h1.lesNumber {
+	font-family: sans-serif, Arial, Helvetica;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: #cecaa9;
+	position: absolute;
+	left: 0px;
+	top: 16px;
+	width: 190px;
+	height: 35px;
+}
+h2.lesTitle {
+	font-family: sans-serif, Arial, Helvetica;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 19px;
+	color: #655541;
+	position: absolute;
+	left: 180px;
+	top: 16px;
+	width: 666px;
+	height: 20px;
+}
+
+/****************** Content Area ********************/
+#content {
+	position: absolute;
+	left: 60px;
+	top: 105px;
+	width: 845px;
+	height: 363px;
+}
+#content_508 {
+	position: absolute;
+	left: 0px;
+	top: 45px;
+	width: 845px;
+	height: 300px;
+	overflow-y: auto;
+}
+
+h3.pgTitle {
+	font-family: sans-serif, Arial, Helvetica;
+	font-weight: bold;
+	font-size: 18px;
+	color: #982335;
+	margin-bottom: 5px;
+}
+
+h3.KR_pgTitle {
+	font-family: sans-serif, Arial, Helvetica;
+	font-weight: bold;
+	font-size: 18px;
+	color: #982335;
+	margin-bottom: 20px;
+}
+
+/************* Prompts ********************/
+#prompt1 {
+	position: absolute;
+	top: 490px;
+	left: 60px;
+	width: 400px;
+	height: 14px;
+	font-family: sans-serif, Arial, Helvetica;
+	font-weight: bold;
+	font-size: 13px;
+	color: #821c27;
+	text-align: left;
+}
+#prompt2 {
+	position: absolute;
+	top: 477px;
+	left: 60px;
+	width: 360px;
+	height: 30px;
+	font-family: sans-serif, Arial, Helvetica;
+	font-weight: bold;
+	font-size: 13px;
+	color: #821c27;
+	text-align: left;
+	line-height: 14px;
+}
+
+#pgNum {
+	position: absolute;
+	left: 767px;
+	top: 530px;
+	width: 106px;
+	text-align: center;
+}
+
+/************ navBar ******************/
+#navBar {
+	position: absolute;
+	top: 511px;
+	left: 0px;
+	width: 960px;
+	height: 55px;
+	font-family:sans-serif, Arial, Helvetica;
+	font-size:11px;
+	font-weight:normal;
+	color:#252e3a;
+}
+
+#menu, #resources, #glossary, #help, #next, #back, #refresh {
+	position: absolute;
+	top: 0px;
+	height: 55px;
+	display: block;
+}
+
+#menu {
+	left: 19px;
+	width: 85px;
+	background: url("../sysimages/menu_0.jpg");
+}
+#menu:hover { background:url("../sysimages/menu_2.jpg"); }
+#menu span { display: none; }
+
+#glossary {
+	left: 103px;
+	width: 81px;
+	background: url("../sysimages/glossary_0.jpg");
+}
+#glossary:hover { background:url("../sysimages/glossary_2.jpg"); }
+#glossary span { display: none; }
+
+#resources {
+	left: 184px;
+	width: 90px;
+	background: url("../sysimages/resources_0.jpg");
+}
+#resources:hover { background:url("../sysimages/resources_2.jpg"); }
+#resources span { display: none; }
+
+#help {
+	left: 274px;
+	width: 49px;
+	background: url("../sysimages/help_0.jpg");
+}
+#help:hover { background:url("../sysimages/help_2.jpg"); }
+#help span { display: none; }
+
+#refresh {
+	left: 323px;
+	width: 80px;
+	background: url("../sysimages/refresh_0.jpg");
+}
+#refresh:hover { background:url("../sysimages/refresh_2.jpg"); }
+#refresh span { display: none; }
+
+#back {
+	left: 555px;
+	width: 90px;
+	background: url("../sysimages/back_0.jpg");
+	display: block;
+}
+#back:hover { background:url("../sysimages/back_2.jpg"); }
+#back.disabled { display: none; }
+#back span { display: none; }
+
+#next {
+	left: 645px;
+	width: 92px;
+	background: url("../sysimages/next_0.jpg");
+	display: block;
+}
+#next:hover { background:url("../sysimages/next_2.jpg"); }
+#next.disabled { display: none; }
+#next span { display: none;}
+/************** End of navBar ********************/
+
+/************ Knowledge Review Items **********************/
+#qH {
+	position:relative;
+	width: 590px;
+}
+#aH {
+	position:relative;
+	width: 590px;
+}
+
+#qV {
+	position: relative;
+	width: 200px;
+	height: 300px;
+	float: left;
+}
+#vBar {
+	position: relative;
+	width: 1px;
+	height: 284px;
+	margin: 0px 10px;
+	float: left;
+}
+#vBar2 {
+	position: absolute;
+	left: 606px;
+	top: 33px;
+	width: 15px;
+	height: 290px;
+}
+#aV {
+	position: relative;
+	width: 380px;
+	height: 300px;
+	float: left;
+}
+img.qImg {
+	margin-right: 15px;
+	float: left;
+}
+p.qStem {
+	float: left;
+}
+table.qDistracters {
+	width: 100%;
+	float: left;
+}
+table.qDistracters td {
+	padding: 5px 0;
+}
+
+#feedback {
+	position: absolute;
+	left: 616px;
+	top: 5px;
+	width: 235px;
+	height: 327px;
+	clear: both;
+	display: none;
+}
+.fdbkTitle {
+	font-family: sans-serif, Arial, Helvetica;
+	font-weight: bold;
+	font-size: 28px;
+	color: #7d8748;
+	text-transform: uppercase;
+}
+#fdbkTxt {
+	font-family: sans-serif, Arial, Helvetica;
+	font-weight: normal;
+	line-height: 16px;
+	font-style: normal;
+	font-size: 14px;
+	margin-top: 10px;
+}
+#fdbkTxt p {
+	color: #2b4b76;
+}
+
+#submit {
+	position: absolute;
+	left: 380px;
+	top: 301px;
+	width: 78px;
+	height: 28px;
+	clear: both;
+}
+
+#submit_2 {
+	position: absolute;
+	left: 480px;
+	top: 370px;
+	width: 78px;
+	height: 28px;
+	clear: both;
+}
+
+#submit_3 {
+	position: absolute;
+	left: 389px;
+	top: 343px;
+	width: 78px;
+	height: 28px;
+	clear: both;
+}
+
+#submit_4 {
+	position: absolute;
+	left: 385px;
+	top: 352px;
+	width: 78px;
+	height: 28px;
+	clear: both;
+}
+
+/****************** Questions ****************************/
+.button {
+	border:none;
+	outline:none;
+}
+
+td.rdck { width:50px; text-align:right; height:20px; vertical-align:top; }
+td.letter { width:30px; text-align:center; vertical-align:top; padding-top:2px; }
+td.disTxt { text-align:left; vertical-align:top; }
+input.tf { margin: 3px 5px 3px 40px; }
+
+/****************** Grid Table ***************************/
+.gridStyle {
+	border-style:solid; 
+	border-color:#999; 
+	border-collapse:collapse;
+	border-width:0 1px 1px 0; 
+}
+td.gridTop {
+	border-style:solid; 
+	border-color:#999; 
+	border-collapse:collapse;
+	border-width:1px 1px 1px 0; 
+	font-weight:bold;
+	padding: 3px 0;
+}
+td.gridLeft {
+	border-style:solid; 
+	border-color:#999; 
+	border-collapse:collapse;
+	border-width:0 1px 1px 1px; 
+	padding:4px 5px 4px 2px;
+}
+td.gridFirstCell {
+	border-style:solid; 
+	border-color:#999; 
+	border-collapse:collapse;
+	border-width:1px; 
+	font-weight:bold;
+}
+/****************** End of Grid Table ***************************/
+
+/******************** 508 table *********************************/
+table.c508 {
+	border-collapse:collapse;
+	border: 1px solid #999;
+}
+	
+th.c508 {
+	font-weight:bold;
+	padding:5px;
+	border: 1px solid #999;
+}
+td.c508 {
+	padding:4px;
+	vertical-align:top;
+	border: 1px solid #999;
+}
+td.graf {
+	vertical-align:top;
+	border: 1px solid #999;
+}
+/******************** End of 508 table *********************************/
+
+#flashAudio {
+	/* Off Screen */
+	position:absolute;
+	left:-3000px;
+	top:200px;
+	width:1px;
+	height:1px;
+}
+
+/***** Comment Links *****/
+#comment_link {
+	position: absolute;
+	top: 585px;
+	left: 353px;
+	width: 300px;
+	height: 20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	z-index: 10;
+	display: block;
+}
+#comment_link #add_comment {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#comment_link #view_comment {
+	position: absolute;
+	top:0;
+	left: 150px;
+	text-align: right;
+}
+/* End of Comment Links */

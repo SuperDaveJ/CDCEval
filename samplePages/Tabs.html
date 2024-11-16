@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/cdc_hp_content.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Introduction to Policy Evaluation</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../styles/cdc_hp.css" />
+<script type="text/javascript" src="../scripts/jquery-1.7.1.min.js"></script>
+<script type="text/JavaScript" src="../scripts/APIWrapper.js"></script>
+<script type="text/JavaScript" src="../scripts/SCOFunctions.js"></script>
+<script type="text/javascript" src="../scripts/cdc_hp_scorm.js"></script>
+<script type="text/javascript" src="../scripts/cdc_hp_content.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../tooltipster-master/css/tooltipster.css" />
+<script type="text/javascript" src="../tooltipster-master/js/jquery.tooltipster.min.js"></script>
+<style type="text/css">
+	#tabHolder {
+		position: absolute; 
+		left: 0px; 
+		top: 155px; 
+		height: 180px; 
+		width: 843px; 
+		border: 1px solid #333;
+	}
+	#left {
+		position: absolute; 
+		left: 0px; 
+		top: 0px; 
+		height: 180px; 
+		width: 250px; 
+		border-right: 1px solid #999;
+	}
+	#middle {
+		position: absolute; 
+		left: 250px; 
+		top: 0px; 
+		height: 180px; 
+		width: 297px; 
+		border-right: 1px solid #999;
+	}
+	#right {
+		position: absolute; 
+		left: 547px; 
+		top: 0px; 
+		height: 180px; 
+		width: 296px; 
+		border: none;
+	}
+
+	#mtitle {
+		position:absolute;
+		width:297px;
+		border-left: 1px solid #999;
+		border-bottom: 1px solid #999;
+	}
+	#rtitle {
+		position:absolute;
+		width:295px;
+		border-left: 1px solid #999;
+		border-bottom: 1px solid #999;
+	}
+	p.tTitle { 
+		font-weight: bold;
+		font-size: 16px;
+		width: 100%;
+		line-height:27px;
+		text-align:center;
+		background:#ddd;
+		border-right: 1px solid #333;
+	}
+	#left a {
+		font-size:14px;
+		font-weight:bold;
+		display: block;
+		line-height: 28px;
+		border-top: 1px solid #999;
+		background:#cc9;
+		padding-left:10px;
+		text-decoration:none;
+	}
+	#left a:visited {
+		background:#ffc;
+		text-decoration:none;
+		color:#900;
+	}
+	#left a:hover {
+		background:#9cc;
+		text-decoration:none;
+		color:#000;
+	}
+	#left a:active {
+		background:#333;
+		text-decoration:none;
+		color:#fff;
+	}
+	#left a.itemActive {
+		background:#333;
+		text-decoration:none;
+		color:#fff;
+	}
+	#mtext {
+	  position: absolute;
+	  left: 8px;
+	  top: 43px;
+	  width: 280px;
+	  height: 130px;
+	}
+	#rtext {
+	  position: absolute;
+	  left: 8px;
+	  top: 43px;
+	  width: 280px;
+	  height: 130px;
+	}
+	
+	#skill1, #role1, #skill2, #role2, #skill3, #role3, #skill4, #role4, #skill5, #role5 {
+		position:absolute;
+		left:10px;
+		top:300px;
+		width:800px;
+		height:0px;
+		overflow:hidden;
+	}
+</style>
+
+<script type="text/javascript">
+    itemsViewed = "00000";
+	
+	if ( !isPageViewed(getPage()) ) {
+		enableNext = false;
+	}
+    var nextURL = "LessonFromField.html";
+    var backURL = "Hover.html";
+
+	function showText( iItem ) {
+		for (var i=1; i<=5; ++i) {
+			$("#a"+i).removeClass("itemActive");
+		}
+		$("#mtext").html( $("#skill"+iItem).html() );
+		$("#rtext").html( $("#role"+iItem).html() );
+		$("#a"+iItem).addClass("itemActive");
+	}
+</script>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="contentHolder" class="content">
+
+<div id="heading">
+<!-- InstanceBeginEditable name="Heading" -->
+<h1 class="lesNumber">Lesson X</h1>
+<h2 class="lesTitle">Tabs</h2>
+<!-- InstanceEndEditable -->
+</div><!-- End of heading -->
+
+<!-- InstanceBeginEditable name="PageNumber" -->
+<div id="pgNum">Page # of 24</div>
+<!-- InstanceEndEditable -->
+
+<div id="content">
+  <!-- InstanceBeginEditable name="text_left" -->
+<h3 class="pgTitle">Step 1: Engaging Stakeholders (Lesson 3 screen 3)</h3>
+
+<p style="font-style:italic; font-weight:bold;">How the Step Is Unique for Policy Evaluation</p>
+
+<p>When engaging stakeholders during a policy evaluation, you may encounter some unique challenges. Because multiple private and public sectors often participate in policy efforts, it can be challenging to come up with a complete list of potential stakeholders. Consider stakeholders from a variety of sectors and disciplines and not just the “usual suspects.” Stakeholders from a variety of fields will provide unique perspectives on the evaluation.</p>
+
+<p>Click each type of stakeholder to view some examples of the key skills and expertise they can bring to table and the roles they may play.</p>
+ 
+
+<div id="tabHolder">
+
+<div id="left">
+<p class="tTitle">Types of Stakeholders</p>
+<a id="a1" href="javascript:showText(1);checkStatus(1);">Policy Experts</a>
+<a id="a2" href="javascript:showText(2);checkStatus(2);">Evaluation Experts</a>
+<a id="a3" href="javascript:showText(3);checkStatus(3);">Subject Matter Experts</a>
+<a id="a4" href="javascript:showText(4);checkStatus(4);">Those Impacted by Policy</a>
+<a id="a5" href="javascript:showText(5);checkStatus(5);">Decision Makers/Others</a>
+</div>
+
+<div id="middle">
+  <div id="mtitle"><p class="tTitle">Skills/Expertise</p></div>
+  <div id="mtext"></div>
+</div>
+
+<div id="right">
+  <div id="rtitle"><p class="tTitle" style="border-right:none;">Key Roles</p></div>
+  <div id="rtext"></div>
+</div>
+
+<p style="position: absolute; left: 481px; top: 191px; width: 345px;"><a href='javascript:show508version("Tabs_508.html");'>Select this link for a text alternative to the question.</a></p>
+
+</div><!-- End of tabHolder -->
+
+<div id="skill1">
+<ul>
+	<li>Expertise in policy process</li>
+	<li>Understanding of critical policy content and implementation factors</li>
+</ul>
+</div>
+
+<div id="role1">
+<ul>
+	<li>Describing the policy</li>
+	<li>Focusing the evaluation design</li>
+	<li>Justifying results</li>
+	<li>Ensuring use and lessons learned</li>
+</ul>
+</div>
+
+
+<div id="skill2">
+<ul>
+	<li>Evaluation design and methodology</li>
+	<li>Statistical expertise</li>
+</ul>
+</div>
+
+<div id="role2">
+<ul>
+	<li>Focusing the evaluation</li>
+	<li>Gathering credible evidence</li>
+	<li>Justify conclusions</li>
+</ul>
+</div>
+
+
+<div id="skill3">
+<ul>
+	<li>Contextual knowledge</li> 
+	<li>Knowledge of barriers and facilitators to implementation and evaluation</li>
+	<li>Familiarity with data sources</li>
+	<li>Alternative perspective on meaning of results</li>
+</ul>
+</div>
+
+<div id="role3">
+<ul>
+	<li>Engaging stakeholders</li>
+	<li>Describing the policy</li>
+	<li>Gathering credible evidence</li>
+	<li>Justifying conclusions</li>
+	<li>Ensuring use and lessons learned</li>
+</ul>
+</div>
+
+
+<div id="skill4">
+<ul>
+	<li>Contextual knowledge </li>
+	<li>Understanding of critical policy content and implementation factors</li>
+	<li>Knowledge of barriers and facilitators to implementation and evaluation</li>
+	<li>Alternative perspective on meaning of results</li>
+</ul>
+</div>
+
+<div id="role4">
+<ul>
+	<li>Engaging stakeholders</li>
+	<li>Focusing the evaluation design</li>
+	<li>Describing the policy</li>
+	<li>Gathering credible evidence</li>
+	<li>Justifying conclusions</li>
+	<li>Ensuring use and lessons learned</li>
+</ul>
+</div>
+
+
+<div id="skill5">
+<ul>
+	<li>Not available</li>
+	<li>Not available</li>
+</ul>
+</div>
+
+<div id="role5">
+<ul>
+	<li>Not available</li>
+	<li>Not available</li>
+	<li>Not available</li>
+	<li>Not available</li>
+</ul>
+</div>
+<!-- InstanceEndEditable -->
+</div><!-- End of content -->
+
+<!-- InstanceBeginEditable name="prompt" -->
+<div id="prompt2">Select each graphic to learn more. Then select the NEXT arrow to continue.</div>
+<!-- InstanceEndEditable -->
+
+<div id="navBar">
+  	<a href="#" id="next" name="next" title="Next"><span>Next</span></a>
+  	<a href="#" id="back" name="back" title="Back"><span>Back</span></a>
+  	<a href="#" id="refresh" name="refresh" title="Refresh"><span>Refresh</span></a>
+    <a href="#" id="help" name="help" title="Help"><span>Help</span></a>
+    <a href="#" id="resources" name="resources" title="Resources"><span>Resources</span></a>
+    <a href="#" id="glossary" name="glossary" title="Glossary"><span>Glossary</span></a>
+    <a href="#" id="menu" name="menu" title="Menu"><span>Menu</span></a>
+</div><!-- End of navBar -->
+
+<a href="#" name="exit" title="Exit" id="exit"><span>Exit</span></a>
+
+<!-- Comment Tool -->
+<div id="comment_link">
+    <div id="add_comment">
+    <a href="javascript:addComment()">Add Comment</a></div>
+    
+    <div id="view_comment">
+    <a href="javascript:viewComment()">View Comments</a></div>
+</div>
+<!-- End of Comment Tool -->
+
+</div><!-- End of contentHolder -->
+
+<!-- InstanceBeginEditable name="BottomCodeArea" -->
+
+<!-- InstanceEndEditable -->
+
+</body>
+<!-- InstanceEnd --></html>

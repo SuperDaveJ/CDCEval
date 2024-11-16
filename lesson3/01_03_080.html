@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/cdc_hp_content.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Introduction to Policy Evaluation</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet" type="text/css" href="../styles/cdc_hp.css" />
+<script type="text/javascript" src="../scripts/jquery-1.7.1.min.js"></script>
+<script type="text/JavaScript" src="../scripts/APIWrapper.js"></script>
+<script type="text/JavaScript" src="../scripts/SCOFunctions.js"></script>
+<script type="text/javascript" src="../scripts/cdc_hp_scorm.js"></script>
+<script type="text/javascript" src="../scripts/cdc_hp_content.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="../shadowbox/shadowbox.css" />
+<script type="text/javascript" src="../shadowbox/shadowbox.js"></script>
+<link rel="stylesheet" type="text/css" href="../tooltipster-master/css/tooltipster.css" />
+<script type="text/javascript" src="../tooltipster-master/js/jquery.tooltipster.min.js"></script>
+<style type="text/css">
+	#tabHolder {
+		position: absolute; 
+		left: 50px; 
+		top: 155px; 
+		height: 180px; 
+		width: 750px; 
+		border: 1px solid #333;
+	}
+	#left {
+		position: absolute; 
+		left: 0px; 
+		top: 0px; 
+		height: 180px; 
+		width: 250px; 
+		border-right: 1px solid #999;
+	}
+	#middle {
+	position: absolute;
+	left: 0;
+	top: 0px;
+	height: 180px;
+	width: 750px;
+	border-right: 1px solid #999;
+	}
+	#right {
+	position: absolute;
+	left: 194px;
+	top: 0px;
+	height: 180px;
+	width: 560px;
+	border: none;
+	}
+
+	#mtitle {
+	position: absolute;
+	width: 370px;
+	border-left: 1px solid #999;
+	border-bottom: 1px solid #999;
+	}
+	#rtitle {
+	position: absolute;
+	width: 376px;
+	border-left: 1px solid #999;
+	border-bottom: 1px solid #999;
+	left: 179px;
+	}
+	p.tTitle { 
+		font-weight: bold;
+		font-size: 16px;
+		width: 100%;
+		line-height:27px;
+		text-align:center;
+		background:#ddd;
+		border-right: 1px solid #333;
+	}
+	#left a {
+		font-size:14px;
+		font-weight:bold;
+		display: block;
+		line-height: 28px;
+		border-top: 1px solid #999;
+		background:#cc9;
+		padding-left:10px;
+		text-decoration:none;
+	}
+	#left a:visited {
+		background:#ffc;
+		text-decoration:none;
+		color:#900;
+	}
+	#left a:hover {
+		background:#9cc;
+		text-decoration:none;
+		color:#000;
+	}
+	#left a:active {
+		background:#333;
+		text-decoration:none;
+		color:#fff;
+	}
+	#left a.itemActive {
+		background:#333;
+		text-decoration:none;
+		color:#fff;
+	}
+	#mtext {
+	position: absolute;
+	left: 8px;
+	top: 43px;
+	width: 731px;
+	height: 130px;
+	}
+	#rtext {
+	  position: absolute;
+	  left: 8px;
+	  top: 43px;
+	  width: 280px;
+	  height: 130px;
+	}
+	
+	#skill1, #role1, #skill2, #role2, #skill3, #role3, #skill4, #role4, #skill5, #role5 {
+		position:absolute;
+		left:10px;
+		top:300px;
+		width:800px;
+		height:0px;
+		overflow:hidden;
+	}
+</style>
+
+<script type="text/javascript">
+    itemsViewed = "00000";
+	
+	if ( !isPageViewed(getPage()) ) {
+		enableNext = true;
+	}
+    var nextURL = "01_03_090.html";
+    var backURL = "01_03_070.html";
+
+	function showText( iItem ) {
+		for (var i=1; i<=5; ++i) {
+			$("#a"+i).removeClass("itemActive");
+		}
+		$("#mtext").html( $("#skill"+iItem).html() );
+		$("#rtext").html( $("#role"+iItem).html() );
+		$("#a"+iItem).addClass("itemActive");
+	}
+	
+	Shadowbox.init({
+		overlayOpacity: 0.8,
+		modal: true
+	});
+</script>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="contentHolder" class="content">
+
+<div id="heading">
+<!-- InstanceBeginEditable name="Heading" -->
+<h1 class="lesNumber">Lesson 3</h1>
+<h2 class="lesTitle">Evaluation Within and Across the Policy Process Domains</h2>
+<!-- InstanceEndEditable -->
+</div><!-- End of heading -->
+
+<!-- InstanceBeginEditable name="PageNumber" -->
+<div id="pgNum">Page 8 of 20</div>
+<!-- InstanceEndEditable -->
+
+<div id="content">
+  <!-- InstanceBeginEditable name="text_left" -->
+<h3 class="pgTitle">Step 3: Focusing the Evaluation Design</h3>
+<p><strong><em>Identifying  Evaluation Questions</em></strong></p>
+Once the team has  pinpointed the focus of the evaluation, the next step is to identify the  specific evaluation questions by considering the policy characteristics  and intended use of the evaluation, as shown in the table below. Many  types of  <a href="01_03_080_pop1.html"  rel="shadowbox;width=880;height=500;">evaluation designs</a></strong> exists. To  choose one, consider the  questions in the context of the data and  resources available, and select the most appropriate evaluation design given  the objective and focus of the evaluation.
+ 
+
+<div id="tabHolder">
+
+<div id="middle">
+  <div id="mtitle"><p class="tTitle"><a id="a1" href="javascript:showText(1);checkStatus(1);">Policy Characteristics</a></p></div>
+  <div id="mtext">Keep in mind there is no one “right” design. In an ideal world, the team would select the strongest evaluation design regardless of the required data. 
+Select the tabs above to explore some discussion questions you can use to guide your decision.
+</div>
+</div>
+
+<div id="right">
+  <div id="rtitle"><p class="tTitle" style="border-right:none;"><a id="a2" href="javascript:showText(2);checkStatus(2);">Intended Use</a></p></div>
+</div>
+
+<p style="position: absolute; left: 418px; top: 191px; width: 345px;"><!--<a href='javascript:show508version("Tabs_508.html");'>--><a href="01_03_080_pop1.html" rel="shadowbox;width=880;height=500;">Select this link for a text alternative.</a></p>
+
+</div><!-- End of tabHolder -->
+
+<div id="skill1">
+<ul>
+	<li>What type of policy is being evaluated (legislative, regulatory or organizational)?</li>
+	<li>What level of policy is being evaluated (local, state, national)?</li>
+    <li>What type of evidence base exists for this policy? </li>
+    <li>How complex is the theory of change and the implementation of the policy?</li>
+    <li>What phase is the policy in? Has it been fully implemented?</li>
+</ul>
+</div>
+
+<div id="role1">
+<ul>
+	<li>What is to be determined and accomplished with the evaluation?</li>
+	<li>How will the evaluation be used and who is the potential audience? </li>
+	<li>How will the answers to this evaluation help move the field or policy forward?</li>
+	<li>What are the interests in the evaluation of the policy and the policy itself?</li>
+</ul>
+</div>
+
+
+<div id="skill2">
+<ul>
+	<li>What is to be determined and accomplished with the evaluation?</li>
+	<li>How will the evaluation be used and who is the potential audience? </li>
+	<li>How will the answers to this evaluation help move the field or policy forward?</li>
+	<li>What are the interests in the evaluation of the policy and the policy itself?</li>
+</ul>
+</div>
+
+<div id="role2">
+<ul>
+	<li>Focusing the evaluation</li>
+	<li>Gathering credible evidence</li>
+	<li>Justify conclusions</li>
+</ul>
+</div>
+
+
+<div id="skill3">
+<ul>
+	<li>Contextual knowledge</li> 
+	<li>Knowledge of barriers and facilitators to implementation and evaluation</li>
+	<li>Familiarity with data sources</li>
+	<li>Alternative perspective on meaning of results</li>
+</ul>
+</div>
+
+<div id="role3">
+<ul>
+	<li>Engaging stakeholders</li>
+	<li>Describing the policy</li>
+	<li>Gathering credible evidence</li>
+	<li>Justifying conclusions</li>
+	<li>Ensuring use and lessons learned</li>
+</ul>
+</div>
+
+
+<div id="skill4">
+<ul>
+	<li>Contextual knowledge </li>
+	<li>Understanding of critical policy content and implementation factors</li>
+	<li>Knowledge of barriers and facilitators to implementation and evaluation</li>
+	<li>Alternative perspective on meaning of results</li>
+</ul>
+</div>
+
+<div id="role4">
+<ul>
+	<li>Engaging stakeholders</li>
+	<li>Focusing the evaluation design</li>
+	<li>Describing the policy</li>
+	<li>Gathering credible evidence</li>
+	<li>Justifying conclusions</li>
+	<li>Ensuring use and lessons learned</li>
+</ul>
+</div>
+
+
+<div id="skill5">
+<ul>
+	<li>Not available</li>
+	<li>Not available</li>
+</ul>
+</div>
+
+<div id="role5">
+<ul>
+	<li>Not available</li>
+	<li>Not available</li>
+	<li>Not available</li>
+	<li>Not available</li>
+</ul>
+</div>
+<!-- InstanceEndEditable -->
+</div><!-- End of content -->
+
+<!-- InstanceBeginEditable name="prompt" -->
+<div id="prompt2">Select the highlighted text and tabs to learn  more. <br />
+  Then select the NEXT arrow.</div>
+<!-- InstanceEndEditable -->
+
+<div id="navBar">
+  	<a href="#" id="next" name="next" title="Next"><span>Next</span></a>
+  	<a href="#" id="back" name="back" title="Back"><span>Back</span></a>
+  	<a href="#" id="refresh" name="refresh" title="Refresh"><span>Refresh</span></a>
+    <a href="#" id="help" name="help" title="Help"><span>Help</span></a>
+    <a href="#" id="resources" name="resources" title="Resources"><span>Resources</span></a>
+    <a href="#" id="glossary" name="glossary" title="Glossary"><span>Glossary</span></a>
+    <a href="#" id="menu" name="menu" title="Menu"><span>Menu</span></a>
+</div><!-- End of navBar -->
+
+<a href="#" name="exit" title="Exit" id="exit"><span>Exit</span></a>
+
+<!-- Comment Tool -->
+<div id="comment_link">
+    <div id="add_comment">
+    <a href="javascript:addComment()">Add Comment</a></div>
+    
+    <div id="view_comment">
+    <a href="javascript:viewComment()">View Comments</a></div>
+</div>
+<!-- End of Comment Tool -->
+
+</div><!-- End of contentHolder -->
+
+<!-- InstanceBeginEditable name="BottomCodeArea" -->
+
+<!-- InstanceEndEditable -->
+
+</body>
+<!-- InstanceEnd --></html>
